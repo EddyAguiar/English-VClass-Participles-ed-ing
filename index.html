@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="English VClass — Aula • Participles -ed / -ing">
+<title>English VClass • Aula • Participles -ed / -ing</title>
+<style>
+:root{
+  --primary:#123c69;
+  --secondary:#1f7a8c;
+  --accent:#f4b942;
+  --light:#f4f7fb;
+  --dark:#17202a;
+  --muted:#667085;
+  --green:#16803c;
+  --green-bg:#eaf7ee;
+  --red:#c62828;
+  --red-bg:#fdecec;
+  --white:#fff;
+  --shadow:0 8px 24px rgba(18,60,105,.10);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--light);
+  color:var(--dark);
+  line-height:1.6;
+}
+header{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:white;
+  padding:28px 16px 34px;
+}
+.header-inner{max-width:980px;margin:auto}
+.brand{font-weight:800;letter-spacing:.5px;font-size:1.05rem}
+header h1{font-size:clamp(1.8rem,5vw,3rem);line-height:1.15;margin:12px 0 8px}
+header p{margin:0;opacity:.95;font-size:1rem}
+.progress-wrap{margin-top:22px;background:rgba(255,255,255,.2);border-radius:99px;height:10px;overflow:hidden}
+.progress{width:10%;height:100%;background:var(--accent);border-radius:99px;transition:width .5s ease}
+nav{
+  position:sticky;top:0;z-index:20;
+  background:white;border-bottom:1px solid #e5e7eb;
+  overflow-x:auto;white-space:nowrap;
+}
+nav .nav-inner{max-width:980px;margin:auto;display:flex}
+nav a{
+  display:inline-block;padding:12px 14px;color:var(--primary);
+  text-decoration:none;font-weight:700;font-size:.9rem;
+}
+nav a.done::after{content:" ✓";color:var(--green);font-weight:800}
+main{max-width:980px;margin:auto;padding:20px 14px 50px}
+.card{
+  background:white;border-radius:var(--radius);padding:22px;
+  margin:18px 0;box-shadow:var(--shadow);
+}
+.card h2{color:var(--primary);margin-top:0;font-size:1.45rem}
+.card h3{color:var(--secondary);margin-bottom:8px}
+.badge{
+  display:inline-block;background:#e8f2fb;color:var(--primary);
+  padding:5px 10px;border-radius:999px;font-size:.8rem;font-weight:800;
+}
+.goal-list{padding-left:20px}
+.goal-list li{margin:7px 0}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:420px}
+th,td{padding:12px;border-bottom:1px solid #e8ebef;text-align:left}
+th{background:#eef4fa;color:var(--primary)}
+.example{
+  background:#f8fafc;border-left:5px solid var(--secondary);
+  padding:13px 15px;margin:12px 0;border-radius:8px;
+}
+.example-audio{
+  display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;
+}
+.audio-btn{
+  background:#eaf0f6;border:1px solid #d0d9e6;
+  border-radius:30px;padding:4px 12px;font-size:.75rem;
+  font-weight:700;color:var(--primary);cursor:pointer;
+  display:inline-flex;align-items:center;gap:4px;transition:.15s;
+}
+.audio-btn:hover{background:#d0d9e6}
+.audio-btn.playing{background:var(--secondary);color:white;border-color:var(--secondary)}
+.en{font-weight:700;color:var(--primary)}
+.pt{color:var(--muted)}
+.tip{
+  background:#fff8e7;border-left:5px solid var(--accent);
+  padding:14px;border-radius:8px;margin-top:14px;
+}
+.exercise{
+  border:1px solid #e3e8ef;border-radius:14px;padding:16px;margin:14px 0;
+}
+input[type="text"],textarea,select{
+  width:100%;padding:12px;border:1px solid #ccd5df;border-radius:10px;
+  font:inherit;background:white;
+}
+textarea{min-height:110px;resize:vertical}
+button{
+  border:0;border-radius:12px;padding:12px 17px;
+  background:var(--primary);color:white;font-weight:800;
+  cursor:pointer;font-size:1rem;
+}
+button:hover{filter:brightness(1.08)}
+button.secondary{background:var(--secondary)}
+button.light{background:#eaf0f6;color:var(--primary)}
+.feedback{
+  margin-top:10px;padding:11px;border-radius:10px;font-weight:700;display:none;
+}
+.feedback.correct{display:block;background:var(--green-bg);color:var(--green)}
+.feedback.wrong{display:block;background:var(--red-bg);color:var(--red)}
+.option{
+  display:block;width:100%;text-align:left;margin:8px 0;
+  background:#f5f7fa;color:var(--dark);border:1px solid #dce2e9;
+}
+.option.correct{background:var(--green-bg);border-color:#9ed7ae;color:var(--green)}
+.option.wrong{background:var(--red-bg);border-color:#efaaaa;color:var(--red)}
+.option:disabled{cursor:default;opacity:1}
+.score{
+  text-align:center;background:#eef4fa;border-radius:16px;padding:20px;
+  margin-top:20px;
+}
+.score strong{font-size:2.2rem;color:var(--primary)}
+.audio-box{
+  text-align:center;background:#f5f8fb;border-radius:15px;padding:20px;
+}
+#transcript{display:none;margin-top:15px}
+.speaking-card{
+  background:linear-gradient(135deg,#f5f8fb,#ffffff);
+  border:1px solid #e0e7ef;
+}
+footer{
+  text-align:center;margin-top:30px;padding:28px 15px;
+  color:#777;background:white;border-top:1px solid #e5e7eb;
+}
+footer .copyright{font-weight:700}
+.small{font-size:.88rem;color:var(--muted)}
+.hidden{display:none}
+
+/* Concept cards */
+.concept-card{
+  border:1px solid #e3e8ef;
+  border-radius:16px;
+  padding:18px;
+  margin:16px 0;
+  background:linear-gradient(135deg,#f8fafc,#ffffff);
+}
+.concept-header{
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:8px;margin-bottom:10px;
+}
+.concept-title{font-weight:800;color:var(--primary);font-size:1.05rem;}
+.concept-level{
+  background:#e8f2fb;color:var(--primary);
+  padding:3px 10px;border-radius:999px;
+  font-size:.72rem;font-weight:800;letter-spacing:.5px;
+}
+.concept-question{
+  font-weight:700;color:var(--dark);margin:8px 0;
+}
+.concept-answer{
+  background:#f0f9ff;border-left:4px solid var(--primary);
+  padding:12px 14px;border-radius:8px;margin:10px 0;
+  color:#0c4a6e;
+}
+.concept-pt{color:var(--muted);font-size:.92rem;margin:6px 0;}
+.concept-example{
+  background:#f8fafc;border-radius:8px;padding:10px 12px;
+  margin:8px 0;font-size:.92rem;
+}
+.concept-example strong{color:var(--primary);}
+.vocab-audio{
+  display:inline-flex;align-items:center;gap:4px;
+  background:#eaf0f6;border:1px solid #d0d9e6;
+  border-radius:20px;padding:3px 10px;margin:3px 4px 3px 0;
+  font-size:.78rem;font-weight:600;color:var(--primary);cursor:pointer;
+}
+.vocab-audio:hover{background:#d0d9e6;}
+
+@media(max-width:600px){
+  header{padding-top:23px}
+  .card{padding:18px;margin:14px 0}
+  nav a{padding:11px 12px;font-size:.82rem}
+  button{width:100%;margin-top:5px}
+  .audio-btn{width:auto;margin-top:0}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">English VClass • Edson D'Aguiar</div>
+    <h1>Aula — Participles -ed / -ing</h1>
+    <p>Sentimentos × Características · Formação · Posição · Tempos · Áudio US/UK</p>
+    <div class="progress-wrap" aria-label="Progresso da aula"><div class="progress" id="globalProgress"></div></div>
+    <p class="small" style="color:white;margin-top:8px"><span id="progressLabel">0</span>% concluído • English Foundations • Módulo Participles</p>
+  </div>
+</header>
+
+<nav aria-label="Navegação da aula">
+  <div class="nav-inner">
+    <a href="#objetivos" data-section="objetivos">Objetivos</a>
+    <a href="#concepts" data-section="concepts">Concepts</a>
+    <a href="#adjectives" data-section="adjectives">-ed Adjectives</a>
+    <a href="#pairs" data-section="pairs">-ed vs -ing</a>
+    <a href="#vocab" data-section="vocab">Vocabulary</a>
+    <a href="#exercises" data-section="exercises">Exercises</a>
+    <a href="#listening" data-section="listening">Listening</a>
+    <a href="#quiz" data-section="quiz">Quiz</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ========== OBJETIVOS ========== -->
+<section class="card" id="objetivos">
+  <span class="badge">A2–B2 • PARTICIPLES</span>
+  <h2>🎯 Objetivos da aula</h2>
+  <p>Esta aula integra o conteúdo dos flashcards sobre particípios -ed e -ing. Ao final, você deverá ser capaz de:</p>
+  <ul class="goal-list">
+    <li>Diferenciar <strong>particípio passado (-ed)</strong> e <strong>particípio presente (-ing)</strong>.</li>
+    <li>Usar -ed para descrever <strong>sentimentos e estados</strong> de pessoas.</li>
+    <li>Usar -ing para descrever a <strong>característica/causa</strong> de um sentimento.</li>
+    <li>Formar adjetivos com verbos regulares (<em>interest → interested</em>) e irregulares (<em>break → broken</em>).</li>
+    <li>Posicionar corretamente o particípio (<strong>attributive</strong> vs <strong>predicative</strong>).</li>
+    <li>Usar particípios nos tempos verbais: <strong>presente contínuo, present perfect, passado contínuo</strong>.</li>
+    <li>Dar ênfase com <strong>absolutely, really, very</strong>.</li>
+    <li>Melhorar a compreensão auditiva com áudios autênticos.</li>
+  </ul>
+</section>
+
+<!-- ========== CONCEPTS ========== -->
+<section class="card" id="concepts">
+  <h2>📘 1. Key Concepts — Participle Rules</h2>
+  <p>Os particípios são adjetivos formados a partir de verbos. A escolha entre <strong>-ed</strong> e <strong>-ing</strong> depende de quem causa e quem sente.</p>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">✅ Affirmation — Correct Use</span>
+      <span class="concept-level">A2</span>
+    </div>
+    <div class="concept-question">❓ Which participle should we use to describe a <strong>feeling</strong>?</div>
+    <div class="exercise" id="concept1-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept1-ex')">-ed (excited, interested, bored)</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept1-ex')">-ing (exciting, interesting, boring)</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept1-ex')">Both, with no difference.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ Use <strong>-ed</strong> to describe a feeling or state: <em>excited (animado), interested (interessado), bored (entediado)</em>.</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> She is excited. · He is interested in art. · I am bored.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="Use the -ed participle to describe a feeling. She is excited. He is interested in art. I am bored." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="Use the -ed participle to describe a feeling. She is excited. He is interested in art. I am bored." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="excited" data-accent="us">🔊 excited → animado</span>
+      <span class="vocab-audio" data-phrase="interested" data-accent="us">🔊 interested → interessado</span>
+      <span class="vocab-audio" data-phrase="bored" data-accent="us">🔊 bored → entediado</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">❌ Negation — Common Mistakes</span>
+      <span class="concept-level">A2</span>
+    </div>
+    <div class="concept-question">❓ Which participle should we use to describe a <strong>thing</strong>?</div>
+    <div class="exercise" id="concept2-ex">
+      <button class="option" onclick="answerConcept(this, false, 'concept2-ex')">-ed (excited, confused)</button>
+      <button class="option" onclick="answerConcept(this, true, 'concept2-ex')">-ing (boring, exciting, confusing)</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept2-ex')">-ed for objects, -ing for people.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ Use <strong>-ing</strong> to describe a characteristic or cause: <em>boring (entediante), exciting (empolgante), confusing (confuso — que causa confusão)</em>.</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> The movie is boring. · The news is exciting. · The instructions are confusing.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="Use the -ing participle to describe a characteristic or cause. The movie is boring. The news is exciting. The instructions are confusing." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="Use the -ing participle to describe a characteristic or cause. The movie is boring. The news is exciting. The instructions are confusing." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="boring" data-accent="us">🔊 boring → entediante</span>
+      <span class="vocab-audio" data-phrase="exciting" data-accent="us">🔊 exciting → empolgante</span>
+      <span class="vocab-audio" data-phrase="confusing" data-accent="us">🔊 confusing → confuso</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">❓ Doubt — How to Choose</span>
+      <span class="concept-level">B1</span>
+    </div>
+    <div class="concept-question">❓ How do we differentiate -ed from -ing?</div>
+    <div class="exercise" id="concept3-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept3-ex')">-ed = how someone feels; -ing = what causes the feeling.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept3-ex')">-ed is for past, -ing is for present.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept3-ex')">-ed is formal, -ing is informal.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ Rule: <strong>-ed</strong> describes the person (feeling); <strong>-ing</strong> describes the thing (cause).</div>
+    <div class="concept-example">
+      <strong>Pairs:</strong> frightened (assustado) / frightening (assustador) · tired (cansado) / tiring (cansativo)
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="The -ed form describes how someone feels. The -ing form describes what causes the feeling. He is frightened. The film is frightening." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="The -ed form describes how someone feels. The -ing form describes what causes the feeling. He is frightened. The film is frightening." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="frightened" data-accent="us">🔊 frightened → assustado</span>
+      <span class="vocab-audio" data-phrase="frightening" data-accent="us">🔊 frightening → assustador</span>
+      <span class="vocab-audio" data-phrase="tired" data-accent="us">🔊 tired → cansado</span>
+      <span class="vocab-audio" data-phrase="tiring" data-accent="us">🔊 tiring → cansativo</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">🔄 Frequency — Most Common</span>
+      <span class="concept-level">A2–B1</span>
+    </div>
+    <div class="concept-question">❓ Which participles are most used in everyday English?</div>
+    <div class="exercise" id="concept4-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept4-ex')">interested / interesting · tired / tiring · excited / exciting</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept4-ex')">Only irregular participles.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept4-ex')">Only -ed forms.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ The most frequent pairs are <strong>interested/interesting, tired/tiring, excited/exciting</strong>.</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> I am interested. · The class is interesting. · She is tired. · The work is tiring.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="The most common participle pairs are interested and interesting, tired and tiring, excited and exciting." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="The most common participle pairs are interested and interesting, tired and tiring, excited and exciting." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="interesting" data-accent="us">🔊 interesting → interessante</span>
+      <span class="vocab-audio" data-phrase="exciting" data-accent="us">🔊 exciting → empolgante</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">⚡ Intensity — Emphasis</span>
+      <span class="concept-level">B1</span>
+    </div>
+    <div class="concept-question">❓ How do we add emphasis to participles?</div>
+    <div class="exercise" id="concept5-ex">
+      <button class="option" onclick="answerConcept(this, false, 'concept5-ex')">Use "more" before the participle.</button>
+      <button class="option" onclick="answerConcept(this, true, 'concept5-ex')">Use absolutely, really, very before the participle.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept5-ex')">Double the participle.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ Use <strong>absolutely, really, very</strong> before the participle: <em>absolutely fascinating, really tired, very exciting</em>.</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> The lecture was absolutely fascinating. · I am really tired. · The trip was very exciting.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="Use absolutely, really, or very before the participle. The lecture was absolutely fascinating. I am really tired. The trip was very exciting." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="Use absolutely, really, or very before the participle. The lecture was absolutely fascinating. I am really tired. The trip was very exciting." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="absolutely fascinating" data-accent="us">🔊 absolutely fascinating → absolutamente fascinante</span>
+      <span class="vocab-audio" data-phrase="really tired" data-accent="us">🔊 really tired → realmente cansado</span>
+      <span class="vocab-audio" data-phrase="very exciting" data-accent="us">🔊 very exciting → muito empolgante</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">📍 Position in the Sentence</span>
+      <span class="concept-level">B1</span>
+    </div>
+    <div class="concept-question">❓ Where do we place the participle in the sentence?</div>
+    <div class="exercise" id="concept6-ex">
+      <button class="option" onclick="answerConcept(this, false, 'concept6-ex')">Always at the end of the sentence.</button>
+      <button class="option" onclick="answerConcept(this, true, 'concept6-ex')">Attributive (before the noun) or predicative (after the verb).</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept6-ex')">Only after the subject.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ <strong>Attributive:</strong> before the noun — <em>an exciting movie</em>. <strong>Predicative:</strong> after the verb — <em>the movie is exciting</em>.</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> Attributive: an exciting movie · a confusing situation. · Predicative: the movie is exciting · the situation is confusing.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="The participle can be attributive, before the noun, as in an exciting movie. Or predicative, after the verb, as in the movie is exciting." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="The participle can be attributive, before the noun, as in an exciting movie. Or predicative, after the verb, as in the movie is exciting." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="attributive" data-accent="us">🔊 attributive → atributivo</span>
+      <span class="vocab-audio" data-phrase="predicative" data-accent="us">🔊 predicative → predicativo</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">🎯 Mode — Correct Form</span>
+      <span class="concept-level">A2–B1</span>
+    </div>
+    <div class="concept-question">❓ What is the correct participle form?</div>
+    <div class="exercise" id="concept7-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept7-ex')">Regular: verb + -ed / verb + -ing. Irregular: use the 3rd form.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept7-ex')">Always add -ed to any verb.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept7-ex')">Always use the base form.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ Regular: <em>walk → walked / walking</em>. Irregular: <em>write → written / writing</em> · <em>run → run / running</em>.</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> walk → walked / walking · write → written / writing · run → run / running.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="Regular verbs take -ed or -ing: walk, walked, walking. Irregular verbs use the third form: write, written, writing. Run, run, running." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="Regular verbs take -ed or -ing: walk, walked, walking. Irregular verbs use the third form: write, written, writing. Run, run, running." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="walked" data-accent="us">🔊 walked → caminhou</span>
+      <span class="vocab-audio" data-phrase="written" data-accent="us">🔊 written → escrito</span>
+      <span class="vocab-audio" data-phrase="running" data-accent="us">🔊 running → correndo</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">⏰ Time — Present vs Past</span>
+      <span class="concept-level">B1–B2</span>
+    </div>
+    <div class="concept-question">❓ Which participle do we use for each tense?</div>
+    <div class="exercise" id="concept8-ex">
+      <button class="option" onclick="answerConcept(this, true, 'concept8-ex')">-ing for continuous tenses; -ed/-en for perfect tenses.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept8-ex')">-ed for all tenses.</button>
+      <button class="option" onclick="answerConcept(this, false, 'concept8-ex')">-ing for perfect tenses.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ <strong>Present Continuous:</strong> I am reading. <strong>Present Perfect:</strong> I have read. <strong>Past Continuous:</strong> I was reading.</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> I am reading. · I have read. · I was reading.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="Use the -ing form for continuous tenses and the -ed or -en form for perfect tenses. I am reading. I have read. I was reading." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="Use the -ing form for continuous tenses and the -ed or -en form for perfect tenses. I am reading. I have read. I was reading." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="reading" data-accent="us">🔊 reading → lendo</span>
+      <span class="vocab-audio" data-phrase="read" data-accent="us">🔊 read → lido</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== -ed ADJECTIVES ========== -->
+<section class="card" id="adjectives">
+  <h2>📗 2. Past Participle Adjectives (-ed)</h2>
+  <p>Adjetivos formados a partir do particípio passado de verbos. Eles descrevem <strong>como uma pessoa se sente</strong> ou o <strong>estado de algo</strong>.</p>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">📘 What are Past Participle Adjectives?</span>
+      <span class="concept-level">A2</span>
+    </div>
+    <div class="concept-question">❓ What are past participle adjectives?</div>
+    <div class="exercise" id="pp-ex1">
+      <button class="option" onclick="answerConcept(this, true, 'pp-ex1')">Adjectives formed from the past participle of verbs, describing feelings or resulting states.</button>
+      <button class="option" onclick="answerConcept(this, false, 'pp-ex1')">Adjectives that always end in -ing.</button>
+      <button class="option" onclick="answerConcept(this, false, 'pp-ex1')">Only irregular verbs.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ Formed by adding <strong>-ed</strong> to regular verbs or using the <strong>3rd form</strong> of irregular verbs. They describe feelings or states resulting from an action.</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> I am interested in learning English. · He seemed tired after work. · The children were excited about the trip.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="Past participle adjectives are formed from the past participle of verbs. They describe how a person feels or the state of something. I am interested in learning English. The children were excited about the trip." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="Past participle adjectives are formed from the past participle of verbs. They describe how a person feels or the state of something. I am interested in learning English. The children were excited about the trip." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="interested" data-accent="us">🔊 interested → interessado</span>
+      <span class="vocab-audio" data-phrase="tired" data-accent="us">🔊 tired → cansado</span>
+      <span class="vocab-audio" data-phrase="excited" data-accent="us">🔊 excited → animado</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">🔧 Formation of -ed Adjectives</span>
+      <span class="concept-level">A2–B1</span>
+    </div>
+    <div class="concept-question">❓ How do we form adjectives with -ed?</div>
+    <div class="exercise" id="pp-ex2">
+      <button class="option" onclick="answerConcept(this, true, 'pp-ex2')">Regular: verb + -ed. Irregular: use the 3rd form (past participle).</button>
+      <button class="option" onclick="answerConcept(this, false, 'pp-ex2')">Only verb + -ed.</button>
+      <button class="option" onclick="answerConcept(this, false, 'pp-ex2')">Only irregular forms.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ Regular: <em>interest → interested · surprise → surprised</em>. Irregular: <em>break → broken · write → written</em>. Watch spelling: <em>stop → stopped · worry → worried</em>.</div>
+    <div class="concept-example">
+      <strong>Examples:</strong> interested, surprised, broken, written, stopped, worried.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="Regular verbs add -ed: interest, interested. Irregular verbs use the third form: break, broken. Watch the spelling: stop, stopped. Worry, worried." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="Regular verbs add -ed: interest, interested. Irregular verbs use the third form: break, broken. Watch the spelling: stop, stopped. Worry, worried." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="broken" data-accent="us">🔊 broken → quebrado</span>
+      <span class="vocab-audio" data-phrase="written" data-accent="us">🔊 written → escrito</span>
+      <span class="vocab-audio" data-phrase="worried" data-accent="us">🔊 worried → preocupado</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">📝 Use of -ed Adjectives</span>
+      <span class="concept-level">A2–B1</span>
+    </div>
+    <div class="concept-question">❓ How and when do we use -ed adjectives?</div>
+    <div class="exercise" id="pp-ex3">
+      <button class="option" onclick="answerConcept(this, true, 'pp-ex3')">To describe feelings of people and the state of things — with be/get/become/feel/look.</button>
+      <button class="option" onclick="answerConcept(this, false, 'pp-ex3')">Only with the verb "to be".</button>
+      <button class="option" onclick="answerConcept(this, false, 'pp-ex3')">Only in the past tense.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ Structure: <strong>Subject + be/get/become/feel + -ed adjective</strong>. Examples: <em>She is bored with the movie. The window was broken by the storm.</em></div>
+    <div class="concept-example">
+      <strong>Examples:</strong> She is bored with the movie. · He seemed tired after work. · The children were excited about the trip.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="Use -ed adjectives with be, get, become, feel, or look. She is bored with the movie. He seemed tired after work. The children were excited about the trip." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="Use -ed adjectives with be, get, become, feel, or look. She is bored with the movie. He seemed tired after work. The children were excited about the trip." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="bored" data-accent="us">🔊 bored → entediado</span>
+      <span class="vocab-audio" data-phrase="seemed" data-accent="us">🔊 seemed → pareceu</span>
+      <span class="vocab-audio" data-phrase="excited" data-accent="us">🔊 excited → animado</span>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-header">
+      <span class="concept-title">📚 Common -ed Vocabulary</span>
+      <span class="concept-level">A2</span>
+    </div>
+    <div class="concept-question">❓ Which -ed adjectives are most common?</div>
+    <div class="exercise" id="pp-ex4">
+      <button class="option" onclick="answerConcept(this, true, 'pp-ex4')">interested, bored, excited, tired, surprised, confused, worried, disappointed</button>
+      <button class="option" onclick="answerConcept(this, false, 'pp-ex4')">Only interested and bored.</button>
+      <button class="option" onclick="answerConcept(this, false, 'pp-ex4')">Only irregular forms.</button>
+      <div class="feedback"></div>
+    </div>
+    <div class="concept-answer">✅ These adjectives describe common feelings. Use them with <strong>be, feel, seem, become</strong>. Examples: <em>I'm tired today. / She seems worried.</em></div>
+    <div class="concept-example">
+      <strong>Pairs to memorize:</strong> bored/boring · interested/interesting · excited/exciting · tired/tiring · surprised/surprising · confused/confusing · worried/worrying · disappointed/disappointing.
+    </div>
+    <div class="example-audio">
+      <button class="audio-btn" data-phrase="Common -ed adjectives include interested, bored, excited, tired, surprised, confused, worried, and disappointed. Use them with be, feel, seem, or become." data-accent="us">🇺🇸 US</button>
+      <button class="audio-btn" data-phrase="Common -ed adjectives include interested, bored, excited, tired, surprised, confused, worried, and disappointed. Use them with be, feel, seem, or become." data-accent="uk">🇬🇧 UK</button>
+    </div>
+    <div class="rq-vocab" style="margin-top:12px;padding-top:10px;border-top:1px dashed #d0d9e6;font-size:.88rem;color:var(--muted);">
+      <strong style="color:var(--primary);">📚 Key Vocabulary:</strong>
+      <span class="vocab-audio" data-phrase="surprised" data-accent="us">🔊 surprised → surpreso</span>
+      <span class="vocab-audio" data-phrase="confused" data-accent="us">🔊 confused → confuso</span>
+      <span class="vocab-audio" data-phrase="worried" data-accent="us">🔊 worried → preocupado</span>
+      <span class="vocab-audio" data-phrase="disappointed" data-accent="us">🔊 disappointed → decepcionado</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== -ed vs -ing ========== -->
+<section class="card" id="pairs">
+  <h2>🔄 3. -ed vs -ing — The Essential Difference</h2>
+  <p>A diferença entre -ed e -ing é uma das mais importantes em inglês. Veja os pares e pratique com áudio US/UK.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Feeling (-ed)</th><th>Cause (-ing)</th><th>Example</th><th>Áudio</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>interested</strong> (interessado)</td>
+          <td><strong>interesting</strong> (interessante)</td>
+          <td>I am interested in science. Science is interesting.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="I am interested in science. Science is interesting." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="I am interested in science. Science is interesting." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>bored</strong> (entediado)</td>
+          <td><strong>boring</strong> (entediante)</td>
+          <td>I am bored. The movie is boring.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="I am bored. The movie is boring." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="I am bored. The movie is boring." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>excited</strong> (animado)</td>
+          <td><strong>exciting</strong> (empolgante)</td>
+          <td>She is excited. The news is exciting.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="She is excited. The news is exciting." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="She is excited. The news is exciting." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>tired</strong> (cansado)</td>
+          <td><strong>tiring</strong> (cansativo)</td>
+          <td>He is tired. The work is tiring.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="He is tired. The work is tiring." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="He is tired. The work is tiring." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>surprised</strong> (surpreso)</td>
+          <td><strong>surprising</strong> (surpreendente)</td>
+          <td>We were surprised. The news was surprising.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="We were surprised. The news was surprising." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="We were surprised. The news was surprising." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>confused</strong> (confuso)</td>
+          <td><strong>confusing</strong> (confuso — que causa confusão)</td>
+          <td>I am confused. The instructions are confusing.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="I am confused. The instructions are confusing." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="I am confused. The instructions are confusing." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>frightened</strong> (assustado)</td>
+          <td><strong>frightening</strong> (assustador)</td>
+          <td>The child was frightened. The film was frightening.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="The child was frightened. The film was frightening." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="The child was frightened. The film was frightening." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>worried</strong> (preocupado)</td>
+          <td><strong>worrying</strong> (preocupante)</td>
+          <td>I am worried. The situation is worrying.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="I am worried. The situation is worrying." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="I am worried. The situation is worrying." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+        <tr>
+          <td><strong>disappointed</strong> (decepcionado)</td>
+          <td><strong>disappointing</strong> (decepcionante)</td>
+          <td>She was disappointed. The result was disappointing.</td>
+          <td><div class="example-audio">
+            <button class="audio-btn" data-phrase="She was disappointed. The result was disappointing." data-accent="us">🇺🇸 US</button>
+            <button class="audio-btn" data-phrase="She was disappointed. The result was disappointing." data-accent="uk">🇬🇧 UK</button>
+          </div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tip">
+    <strong>💡 Regra de ouro:</strong> <strong>-ed</strong> descreve <em>quem sente</em> (pessoa) — <em>I am bored</em>. <strong>-ing</strong> descreve <em>o que causa</em> o sentimento (coisa/situação) — <em>The movie is boring</em>.
+  </div>
+</section>
+
+<!-- ========== VOCABULARY ========== -->
+<section class="card" id="vocab">
+  <h2>🧠 4. Vocabulary — Consolidated Glossary</h2>
+  <p>Glossário consolidado com os principais particípios e termos da aula, com áudio US/UK.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>English</th><th>Português</th><th>Áudio</th></tr></thead>
+      <tbody>
+        <tr><td>excited / exciting</td><td>animado / empolgante</td><td><div class="example-audio"><button class="audio-btn" data-phrase="excited, exciting" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="excited, exciting" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>interested / interesting</td><td>interessado / interessante</td><td><div class="example-audio"><button class="audio-btn" data-phrase="interested, interesting" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="interested, interesting" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>bored / boring</td><td>entediado / entediante</td><td><div class="example-audio"><button class="audio-btn" data-phrase="bored, boring" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="bored, boring" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>tired / tiring</td><td>cansado / cansativo</td><td><div class="example-audio"><button class="audio-btn" data-phrase="tired, tiring" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="tired, tiring" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>surprised / surprising</td><td>surpreso / surpreendente</td><td><div class="example-audio"><button class="audio-btn" data-phrase="surprised, surprising" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="surprised, surprising" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>confused / confusing</td><td>confuso / que causa confusão</td><td><div class="example-audio"><button class="audio-btn" data-phrase="confused, confusing" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="confused, confusing" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>frightened / frightening</td><td>assustado / assustador</td><td><div class="example-audio"><button class="audio-btn" data-phrase="frightened, frightening" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="frightened, frightening" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>worried / worrying</td><td>preocupado / preocupante</td><td><div class="example-audio"><button class="audio-btn" data-phrase="worried, worrying" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="worried, worrying" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>disappointed / disappointing</td><td>decepcionado / decepcionante</td><td><div class="example-audio"><button class="audio-btn" data-phrase="disappointed, disappointing" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="disappointed, disappointing" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>fascinating</td><td>fascinante</td><td><div class="example-audio"><button class="audio-btn" data-phrase="fascinating" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="fascinating" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>broken</td><td>quebrado</td><td><div class="example-audio"><button class="audio-btn" data-phrase="broken" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="broken" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>written</td><td>escrito</td><td><div class="example-audio"><button class="audio-btn" data-phrase="written" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="written" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>lost</td><td>perdido</td><td><div class="example-audio"><button class="audio-btn" data-phrase="lost" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="lost" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>impressed</td><td>impressionado</td><td><div class="example-audio"><button class="audio-btn" data-phrase="impressed" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="impressed" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>attributive</td><td>atributivo (antes do substantivo)</td><td><div class="example-audio"><button class="audio-btn" data-phrase="attributive" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="attributive" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+        <tr><td>predicative</td><td>predicativo (depois do verbo)</td><td><div class="example-audio"><button class="audio-btn" data-phrase="predicative" data-accent="us">🇺🇸 US</button><button class="audio-btn" data-phrase="predicative" data-accent="uk">🇬🇧 UK</button></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ========== EXERCISES ========== -->
+<section class="card" id="exercises">
+  <h2>✏️ 5. Exercises</h2>
+
+  <div class="exercise">
+    <h3>Exercise 1 — Identify the Participle</h3>
+    <p>"She is excited." — Which type of participle is "excited"?</p>
+    <select id="ex1">
+      <option value="">Choose an answer</option>
+      <option>-ed (past participle)</option>
+      <option>-ing (present participle)</option>
+      <option>None of the above</option>
+    </select>
+    <button class="secondary" onclick="checkEx1()">Check answer</button>
+    <div id="ex1fb" class="feedback"></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Exercise 2 — Identify the Participle</h3>
+    <p>"The movie is boring." — Which type of participle is "boring"?</p>
+    <select id="ex2">
+      <option value="">Choose an answer</option>
+      <option>-ed (past participle)</option>
+      <option>-ing (present participle)</option>
+      <option>None of the above</option>
+    </select>
+    <button class="secondary" onclick="checkEx2()">Check answer</button>
+    <div id="ex2fb" class="feedback"></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Exercise 3 — Complete the Sentence</h3>
+    <p>"I am ______ in art." (interessado)</p>
+    <select id="ex3">
+      <option value="">Choose an answer</option>
+      <option>interesting</option>
+      <option>interested</option>
+      <option>interest</option>
+    </select>
+    <button class="secondary" onclick="checkEx3()">Check answer</button>
+    <div id="ex3fb" class="feedback"></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Exercise 4 — Complete the Sentence</h3>
+    <p>"The book is ______." (interessante)</p>
+    <select id="ex4">
+      <option value="">Choose an answer</option>
+      <option>interested</option>
+      <option>interesting</option>
+      <option>interest</option>
+    </select>
+    <button class="secondary" onclick="checkEx4()">Check answer</button>
+    <div id="ex4fb" class="feedback"></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Exercise 5 — Formation</h3>
+    <p>What is the past participle of "write"?</p>
+    <select id="ex5">
+      <option value="">Choose an answer</option>
+      <option>wrote</option>
+      <option>written</option>
+      <option>writing</option>
+    </select>
+    <button class="secondary" onclick="checkEx5()">Check answer</button>
+    <div id="ex5fb" class="feedback"></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Exercise 6 — Translation</h3>
+    <p>"Estou cansado."</p>
+    <input id="ex6" type="text" placeholder="Type the English sentence">
+    <button class="secondary" onclick="checkEx6()">Check answer</button>
+    <div id="ex6fb" class="feedback"></div>
+  </div>
+</section>
+
+<!-- ========== LISTENING ========== -->
+<section class="card" id="listening">
+  <h2>🎧 6. Listening Practice — A Day at Work</h2>
+  <p>Ouça o texto e responda às perguntas. Ele usa particípios -ed e -ing em contexto natural.</p>
+
+  <div class="audio-box">
+    <button onclick="speakListening()">🔊 Play Listening</button>
+    <button class="light" onclick="toggleTranscript()">📄 Show / Hide Transcript</button>
+    <div id="transcript" class="example">
+      <div class="en">
+        Hi, my name is Laura. Yesterday was a very tiring day at work.
+        I was really tired by the end of the afternoon. My manager gave
+        us a confusing presentation — the instructions were not clear,
+        so we all felt confused. But the project itself is exciting!
+        I am interested in the new challenge, and my colleagues are
+        excited too. One of them was surprised by the news, because
+        the company has changed a lot. The new office is amazing —
+        it is a fascinating place. I am not bored at all. At the end
+        of the day, I was disappointed because I had lost my keys,
+        but I found them later. Overall, it was an interesting day.
+      </div>
+      <div class="pt">
+        Olá, meu nome é Laura. Ontem foi um dia muito cansativo no trabalho.
+        Eu estava realmente cansada ao final da tarde. Meu gerente nos deu
+        uma apresentação confusa — as instruções não eram claras,
+        então todos nos sentimos confusos. Mas o projeto em si é empolgante!
+        Estou interessada no novo desafio, e meus colegas estão
+        animados também. Um deles ficou surpreso com a notícia, porque
+        a empresa mudou muito. O novo escritório é incrível —
+        é um lugar fascinante. Não estou nem um pouco entediada. No final
+        do dia, fiquei decepcionada porque havia perdido minhas chaves,
+        mas as encontrei depois. No geral, foi um dia interessante.
+      </div>
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Listening Questions</h3>
+    <p><strong>1.</strong> How was Laura's day at work?</p>
+    <select id="l1">
+      <option value="">Choose</option><option>Relaxing</option><option>Tiring</option><option>Boring</option>
+    </select>
+
+    <p><strong>2.</strong> How did she feel by the end of the afternoon?</p>
+    <select id="l2">
+      <option value="">Choose</option><option>Excited</option><option>Really tired</option><option>Surprised</option>
+    </select>
+
+    <p><strong>3.</strong> How was the manager's presentation?</p>
+    <select id="l3">
+      <option value="">Choose</option><option>Interesting</option><option>Confusing</option><option>Exciting</option>
+    </select>
+
+    <p><strong>4.</strong> How did the team feel about the presentation?</p>
+    <select id="l4">
+      <option value="">Choose</option><option>Interested</option><option>Confused</option><option>Bored</option>
+    </select>
+
+    <p><strong>5.</strong> How does Laura describe the project?</p>
+    <select id="l5">
+      <option value="">Choose</option><option>Tiring</option><option>Exciting</option><option>Worrying</option>
+    </select>
+
+    <p><strong>6.</strong> How are her colleagues feeling about the challenge?</p>
+    <select id="l6">
+      <option value="">Choose</option><option>Bored</option><option>Excited</option><option>Disappointed</option>
+    </select>
+
+    <p><strong>7.</strong> How did one colleague react to the news?</p>
+    <select id="l7">
+      <option value="">Choose</option><option>He was surprised</option><option>He was bored</option><option>He was tired</option>
+    </select>
+
+    <p><strong>8.</strong> How does Laura describe the new office?</p>
+    <select id="l8">
+      <option value="">Choose</option><option>Boring</option><option>Fascinating</option><option>Confusing</option>
+    </select>
+
+    <p><strong>9.</strong> Why was Laura disappointed?</p>
+    <select id="l9">
+      <option value="">Choose</option><option>She lost her keys</option><option>She missed a meeting</option><option>She was late</option>
+    </select>
+
+    <p><strong>10.</strong> How does she describe the day overall?</p>
+    <select id="l10">
+      <option value="">Choose</option><option>An interesting day</option><option>A boring day</option><option>A confusing day</option>
+    </select>
+
+    <button class="secondary" onclick="checkListening()">Check Listening</button>
+    <div id="lfb" class="feedback"></div>
+  </div>
+</section>
+
+<!-- ========== QUIZ ========== -->
+<section class="card" id="quiz">
+  <h2>🎮 7. Interactive Quiz</h2>
+  <p>10 questões sobre particípios -ed e -ing. O feedback aparece imediatamente. <em>As questões são embaralhadas a cada tentativa.</em></p>
+
+  <div id="quizContainer"></div>
+
+  <div class="score">
+    <div>YOUR SCORE</div>
+    <strong id="score">0 / 10</strong>
+    <p id="scoreMessage">Complete o quiz para ver seu resultado.</p>
+    <button class="light" onclick="restartQuiz()">🔄 Restart Quiz</button>
+  </div>
+</section>
+
+<section class="card">
+  <h2>🏁 Lesson Challenge</h2>
+  <p>Sem consultar o conteúdo, complete em inglês:</p>
+  <div class="example">
+    <strong>1. I am ______ (interessado) in science.</strong><br>
+    <strong>2. Science is ______ (interessante).</strong><br>
+    <strong>3. She was ______ (surpresa) by the news.</strong><br>
+    <strong>4. The news was ______ (surpreendente).</strong><br>
+    <strong>5. The broken vase was on the floor — here "broken" is the past participle of ______.</strong><br>
+    <strong>6. I have ______ (finished) my homework.</strong>
+  </div>
+  <p class="small">Objetivo: produzir 6 respostas corretas em 30–45 segundos, diferenciando -ed e -ing e reconhecendo particípios irregulares.</p>
+</section>
+
+</main>
+
+<footer>
+  Inglês Profissional • Preparação para Exames • Cambridge • IELTS • TOEFL • Duolingo English Test (DET)<br>
+  <span class="copyright">© English VClass • Edson D'Aguiar</span>
+  • WhatsApp ➡️ <a href="https://wa.me/5541991725009" target="_blank" rel="noopener">Contato</a>
+</footer>
+
+<script>
+/* ---------- AUDIO ---------- */
+document.addEventListener('click', function(e) {
+  const btn = e.target.closest('.audio-btn, .vocab-audio');
+  if (!btn) return;
+  e.stopPropagation();
+  const phrase = btn.dataset.phrase;
+  const accent = btn.dataset.accent || 'us';
+  if (!phrase) return;
+
+  if (window.speechSynthesis) window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(phrase);
+  const langMap = { us: 'en-US', uk: 'en-GB' };
+  utterance.lang = langMap[accent] || 'en-US';
+  utterance.rate = 0.85;
+  utterance.pitch = 1.0;
+
+  const voices = window.speechSynthesis.getVoices();
+  if (voices.length > 0) {
+    const found = voices.find(v => v.lang.startsWith(utterance.lang)) ||
+                  voices.find(v => v.lang.startsWith('en'));
+    if (found) utterance.voice = found;
+  }
+
+  btn.classList.add('playing');
+  utterance.onend = () => btn.classList.remove('playing');
+  utterance.onerror = () => btn.classList.remove('playing');
+  window.speechSynthesis.speak(utterance);
+});
+
+/* ---------- FEEDBACK HELPER ---------- */
+function setFeedback(el, correct, text){
+  el.className='feedback '+(correct?'correct':'wrong');
+  el.textContent=(correct?'🟢 ':'🔴 ')+text;
+}
+
+/* ---------- CONCEPT CARDS ---------- */
+function answerConcept(btn, isCorrect, cardId){
+  const card = document.getElementById(cardId);
+  const options = card.querySelectorAll('.option');
+  const fb = card.querySelector('.feedback');
+  if ([...options].some(o => o.disabled)) return;
+
+  options.forEach(o => {
+    o.disabled = true;
+    if (o === btn) o.classList.add(isCorrect ? 'correct' : 'wrong');
+  });
+  if (!isCorrect) {
+    options.forEach(o => {
+      const handler = o.getAttribute('onclick') || '';
+      if (handler.includes(', true,')) o.classList.add('correct');
+    });
+  }
+  if (isCorrect) {
+    setFeedback(fb, true, 'Correct!');
+  } else {
+    setFeedback(fb, false, 'Not quite — the highlighted option is the correct answer.');
+  }
+}
+
+/* ---------- PROGRESS ---------- */
+const SECTIONS = ['objetivos','concepts','adjectives','pairs','vocab','exercises','listening','quiz'];
+const sectionState = {};
+SECTIONS.forEach(s => sectionState[s] = false);
+
+function markSectionDone(id){
+  if (sectionState[id]) return;
+  sectionState[id] = true;
+  const link = document.querySelector('nav a[data-section="'+id+'"]');
+  if (link) link.classList.add('done');
+  updateProgress();
+}
+
+function updateProgress(){
+  const done = SECTIONS.filter(s => sectionState[s]).length;
+  const pct = Math.round((done / SECTIONS.length) * 100);
+  document.getElementById('globalProgress').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = pct;
+}
+
+document.querySelectorAll('#exercises .exercise button').forEach(btn => {
+  btn.addEventListener('click', () => markSectionDone('exercises'));
+});
+document.querySelectorAll('#listening button').forEach(btn => {
+  btn.addEventListener('click', () => markSectionDone('listening'));
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      if (['objetivos','concepts','adjectives','pairs','vocab'].includes(id)) markSectionDone(id);
+    }
+  });
+}, { threshold: 0.2 });
+['objetivos','concepts','adjectives','pairs','vocab'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) observer.observe(el);
+});
+
+/* ---------- EXERCISES ---------- */
+function checkEx1(){
+  const v=document.getElementById('ex1').value;
+  setFeedback(document.getElementById('ex1fb'), v==='-ed (past participle)', v==='-ed (past participle)' ? 'Correct! "Excited" is the -ed participle and describes a feeling.' : 'Try again — "excited" is the -ed participle.');
+  markSectionDone('exercises');
+}
+function checkEx2(){
+  const v=document.getElementById('ex2').value;
+  setFeedback(document.getElementById('ex2fb'), v==='-ing (present participle)', v==='-ing (present participle)' ? 'Correct! "Boring" is the -ing participle and describes the characteristic of the movie.' : 'Try again — "boring" is the -ing participle.');
+  markSectionDone('exercises');
+}
+function checkEx3(){
+  const v=document.getElementById('ex3').value;
+  setFeedback(document.getElementById('ex3fb'), v==='interested', v==='interested' ? 'Correct! "Interessado" = interested (-ed, feeling).' : 'Try again — "interessado" = interested.');
+  markSectionDone('exercises');
+}
+function checkEx4(){
+  const v=document.getElementById('ex4').value;
+  setFeedback(document.getElementById('ex4fb'), v==='interesting', v==='interesting' ? 'Correct! "Interessante" = interesting (-ing, characteristic).' : 'Try again — "interessante" = interesting.');
+  markSectionDone('exercises');
+}
+function checkEx5(){
+  const v=document.getElementById('ex5').value;
+  setFeedback(document.getElementById('ex5fb'), v==='written', v==='written' ? 'Correct! The past participle of "write" is "written".' : 'Try again — the past participle of "write" is "written".');
+  markSectionDone('exercises');
+}
+function checkEx6(){
+  const v=document.getElementById('ex6').value.trim().toLowerCase().replace(/[.!?]+$/,'').replace(/\s+/g,' ');
+  const ok=v==='i am tired';
+  setFeedback(document.getElementById('ex6fb'), ok, ok ? 'Correct! "Estou cansado" = "I am tired."' : 'Try again — use "I am tired."');
+  markSectionDone('exercises');
+}
+
+/* ---------- LISTENING ---------- */
+function speakListening(){
+  if(!('speechSynthesis' in window)){
+    alert('Seu navegador não oferece reprodução de voz neste momento.');
+    return;
+  }
+  const text="Hi, my name is Laura. Yesterday was a very tiring day at work. I was really tired by the end of the afternoon. My manager gave us a confusing presentation — the instructions were not clear, so we all felt confused. But the project itself is exciting! I am interested in the new challenge, and my colleagues are excited too. One of them was surprised by the news, because the company has changed a lot. The new office is amazing — it is a fascinating place. I am not bored at all. At the end of the day, I was disappointed because I had lost my keys, but I found them later. Overall, it was an interesting day.";
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='en-US'; u.rate=.88;
+  speechSynthesis.cancel(); speechSynthesis.speak(u);
+  markSectionDone('listening');
+}
+function toggleTranscript(){
+  const t=document.getElementById('transcript');
+  t.style.display=t.style.display==='block'?'none':'block';
+  markSectionDone('listening');
+}
+function checkListening(){
+  let score=0;
+  if(document.getElementById('l1').value==='Tiring') score++;
+  if(document.getElementById('l2').value==='Really tired') score++;
+  if(document.getElementById('l3').value==='Confusing') score++;
+  if(document.getElementById('l4').value==='Confused') score++;
+  if(document.getElementById('l5').value==='Exciting') score++;
+  if(document.getElementById('l6').value==='Excited') score++;
+  if(document.getElementById('l7').value==='He was surprised') score++;
+  if(document.getElementById('l8').value==='Fascinating') score++;
+  if(document.getElementById('l9').value==='She lost her keys') score++;
+  if(document.getElementById('l10').value==='An interesting day') score++;
+  const ok=score===10;
+  const msg=ok?'Excellent! 10/10 correct.':'You got '+score+'/10. Review the transcript and try again.';
+  setFeedback(document.getElementById('lfb'), ok, msg);
+  markSectionDone('listening');
+}
+
+/* ---------- QUIZ (RANDOMIZED) ---------- */
+const baseQuestions=[
+ {q:'Which participle should we use to describe a feeling?',a:['-ed (excited, interested)','-ing (exciting, interesting)','Both, with no difference','Neither'],c:0,e:'-ed describes feelings and states.'},
+ {q:'Which participle should we use to describe a thing or cause?',a:['-ed (excited)','-ing (boring, exciting)','Both, with no difference','Neither'],c:1,e:'-ing describes a characteristic or cause.'},
+ {q:'"She is excited." — Which type of participle is "excited"?',a:['-ed (past participle)','-ing (present participle)','Irregular','None'],c:0,e:'"Excited" is the -ed participle and describes a feeling.'},
+ {q:'"The movie is boring." — Which type of participle is "boring"?',a:['-ed (past participle)','-ing (present participle)','Irregular','None'],c:1,e:'"Boring" is the -ing participle and describes a characteristic.'},
+ {q:'What is the past participle of "write"?',a:['wrote','written','writing','writed'],c:1,e:'The past participle of "write" is "written".'},
+ {q:'What is the past participle of "break"?',a:['broke','broken','breaking','break'],c:1,e:'The past participle of "break" is "broken".'},
+ {q:'Where do we place the participle in "an exciting movie"?',a:['Attributive (before the noun)','Predicative (after the verb)','At the end of the sentence','Never'],c:0,e:'"An exciting movie" — attributive, before the noun.'},
+ {q:'Where do we place the participle in "the movie is exciting"?',a:['Attributive (before the noun)','Predicative (after the verb)','At the end of the sentence','Never'],c:1,e:'"The movie is exciting" — predicative, after the verb.'},
+ {q:'Which sentence uses the -ing form correctly?',a:['I am boring with the class.','The class is boring.','I am interesting in art.','The class is bored.'],c:1,e:'The class is boring (the class causes boredom).'},
+ {q:'"Estou cansado" in English is:',a:['I am tiring.','I am tired.','I am tiredness.','I am tire.'],c:1,e:'"Cansado" = tired (-ed, feeling).'}
+];
+
+let questions = [];
+let quizScore=0;
+let answered=0;
+
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function buildQuestions(){
+  questions = shuffle(baseQuestions).map(q => {
+    const pairs = q.a.map((text, idx) => ({text, correct: idx === q.c}));
+    const shuffledPairs = shuffle(pairs);
+    const newOptions = shuffledPairs.map(p => p.text);
+    const newCorrect = shuffledPairs.findIndex(p => p.correct);
+    return { q: q.q, a: newOptions, c: newCorrect, e: q.e };
+  });
+}
+
+function renderQuiz(){
+  buildQuestions();
+  const c=document.getElementById('quizContainer');
+  c.innerHTML='';
+  questions.forEach((item,i)=>{
+    const box=document.createElement('div');
+    box.className='exercise';
+    box.innerHTML='<h3>Question '+(i+1)+'</h3><p><strong>'+item.q+'</strong></p>';
+    item.a.forEach((ans,j)=>{
+      const b=document.createElement('button');
+      b.className='option';
+      b.textContent=String.fromCharCode(65+j)+') '+ans;
+      b.onclick=()=>answerQuiz(i,j,box);
+      box.appendChild(b);
+    });
+    const f=document.createElement('div');
+    f.className='feedback';
+    f.id='qfb'+i;
+    box.appendChild(f);
+    c.appendChild(box);
+  });
+  updateScore();
+}
+
+function answerQuiz(i,j,box){
+  const buttons=box.querySelectorAll('.option');
+  if([...buttons].some(b=>b.disabled)) return;
+  buttons.forEach(b=>b.disabled=true);
+  const correct=j===questions[i].c;
+  buttons[j].classList.add(correct?'correct':'wrong');
+  if(!correct) buttons[questions[i].c].classList.add('correct');
+  if(correct) quizScore++;
+  answered++;
+  const fb=document.getElementById('qfb'+i);
+  fb.className='feedback '+(correct?'correct':'wrong');
+  fb.textContent=(correct?'🟢 Correct! ':'🔴 Not quite. ')+questions[i].e;
+  updateScore();
+  if(answered===10) markSectionDone('quiz');
+}
+
+function updateScore(){
+  document.getElementById('score').textContent=quizScore+' / 10';
+  const msg=document.getElementById('scoreMessage');
+  if(answered===0) msg.textContent='Complete o quiz para ver seu resultado.';
+  else if(answered<10) msg.textContent='Keep going! '+answered+' of 10 answered.';
+  else if(quizScore===10) msg.textContent='🏆 Excellent! Perfect score!';
+  else if(quizScore>=8) msg.textContent='👏 Great job! Review the questions you missed.';
+  else if(quizScore>=6) msg.textContent='👍 Good start! Review the lesson and try again.';
+  else msg.textContent='📚 Keep practicing. Review the lesson and restart the quiz.';
+}
+
+function restartQuiz(){
+  quizScore=0; answered=0; renderQuiz();
+  document.getElementById('quiz').scrollIntoView({behavior:'smooth'});
+}
+
+renderQuiz();
+updateProgress();
+</script>
+
+</body>
+</html>
